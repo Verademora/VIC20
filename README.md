@@ -1,9 +1,7 @@
-![[PXL_20230716_100056093.jpg]]
+# Commodore VIC 20 Projects
 
-## Motivation
+This repository is where I'm compiling notes, sketches, scripts, and other project files associated with tinkering on an authentic Commodore VIC 20. While this repo is public, I am not seeking contributions. Feel free to fork this repo if you want to do anything with these project files.
 
-I want to better understand how a matrix keyboard works and explore creating a HID controller to use the keyboard on a modern machine over USB.
+## Project 1: The VIC 20 Keyboard
 
-## Preface
-
-### [[How does a matrix keyboard work?]]
+vic20_docs/keyboard/
