@@ -1,20 +1,25 @@
-#define PULLDOWN 2
-#define PULLUP 3
+int RevPinMap[8] = {0, 8, 2, 3, 4, 5, 6, 7};
+int PinMap[8] = {7, 6, 5, 4, 3, 2, 8, 0};
 
 void setup() {
   Serial.begin(9600);
-  pinMode(PULLDOWN, INPUT);
-  pinMode(PULLUP, INPUT_PULLUP);
+  for (int pin = 0; pin < 8; pin++)
+    pinMode(PinMap[pin], INPUT_PULLUP);
 }
 
 void loop() {
-  int PullupState = digitalRead(PULLUP);
-  int PulldownState = digitalRead(PULLDOWN);
+  int ThisPin;
+  int PinState;
 
-  Serial.print("Pullup: ");
-  Serial.print(PullupState);
-  Serial.print("\t");
-  Serial.print("Pulldown: ");
-  Serial.print(PulldownState);
-  Serial.print("\n");
+  for (int Row = 0; Row < 8; Row++) {
+    ThisPin = PinMap[Row];
+    PinState = digitalRead(ThisPin);
+
+    Serial.print("Pin ");
+    Serial.print(Row);
+    Serial.print(": ");
+    Serial.print(PinState);
+    Serial.print("\n");
+  }
+  delay(1000);
 }
