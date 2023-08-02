@@ -6,4 +6,4 @@ I want to better understand how a matrix keyboard works and explore creating a H
 
 ## Preface
 
-### [[How does a matrix keyboard work?]]
+### [[How does a keyboard work?]]

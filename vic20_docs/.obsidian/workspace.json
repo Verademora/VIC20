@@ -8,51 +8,28 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c685fe906f2ab19c",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "6b43bf6a2037e44f",
+            "id": "3e0922e12e582653",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "keyboard/Commodore VIC-20 Keyboard Project.md",
+                "file": "keyboard/How does a keyboard work?.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "66705fdd418dc4d8",
+            "id": "58e0ddc94007bfa4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "keyboard/How does a matrix keyboard work?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c3bd6c6769ea50ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "keyboard/How does a matrix keyboard work?.md",
-                "mode": "source",
-                "source": false
+                "file": "Excalidraw/Drawing 2023-07-31 21.42.17.excalidraw.md"
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "725d00ec43d144a0",
@@ -118,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "keyboard/How does a matrix keyboard work?.md",
+                "file": "keyboard/How does a keyboard work?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "keyboard/How does a matrix keyboard work?.md",
+                "file": "keyboard/How does a keyboard work?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,15 +135,24 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "keyboard/How does a matrix keyboard work?.md"
+                "file": "keyboard/How does a keyboard work?.md"
               }
             }
+          },
+          {
+            "id": "5fbf7005cdc3cebd",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -181,17 +167,28 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c3bd6c6769ea50ee",
+  "active": "3e0922e12e582653",
   "lastOpenFiles": [
+    "keyboard/images/example1.png",
+    "keyboard/images/differences.png",
+    "keyboard/images/current.png",
+    "keyboard/images/arduino_schematics_pins.jpg",
+    "keyboard/images/arduino_pins.png",
+    "keyboard/images/arduino-keyboard-pinout.png",
+    "keyboard/images/Teclado-C-64.png",
+    "keyboard/images/PXL_20230716_100056093.jpg",
+    "keyboard/images/PINOUT_TEST.png",
+    "keyboard/images/Keyboard Matrix6.png",
+    "keyboard/images/Different.png",
+    "keyboard/images",
+    "Excalidraw/Drawing 2023-07-31 21.42.17.excalidraw.md",
+    "keyboard/How does a keyboard work?.md",
+    "keyboard/Commodore VIC-20 Keyboard Project.md",
+    "Excalidraw/Drawing 2023-07-31 23.16.59.excalidraw.md",
+    "Excalidraw",
     "README.md",
     "keyboard",
-    "keyboard/How does a matrix keyboard work?.md",
-    "keyboard/Commodore VIC-20 Keyboard Project.md",
-    "images/Teclado-C-64.png",
     "Pasted image 20230716050546.png.md",
-    "images/PXL_20230716_100056093.jpg",
-    "images",
-    "Pasted image 20230716050546.png",
-    "PXL_20230716_100056093.jpg"
+    "images"
   ]
 }
