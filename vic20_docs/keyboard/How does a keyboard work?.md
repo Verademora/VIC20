@@ -18,6 +18,7 @@ The Commodore VIC 20 I'm using to learn these concepts and tinker on has a 20-pi
 
 #### Fig. 2
 <img src="https://www.keymmodore.com/wp-content/uploads/2020/08/Teclado-C-64.png">
+
 ```
 |-------------------------------------------------------------------|
 |   |   A   |   B   |   C   |   D   |   E   |   F   |   G   |   H   |
@@ -41,19 +42,22 @@ This reference image proved invaluable in helping me understand how to get start
 Throughout the first part of these notes we won't concern ourselves with every single row and column right away. Rather, we'll only focus on controlling a single row pin and monitoring a single column pin. In this way, we'll only see a change in state on the column when the key at the row we're driving and column we're watching is pressed or released. 
 
 I tested each key in the matrix by manually passing power through a row pin and watching the columns with LEDs. For example, I would connect keyboard pin 20 (which maps to column pin A) to an LED in sequence with a resistor going to ground. I would then tie one of the logical row pins, for instance keyboard pin 7 (row 5) to +5v. The LED would illuminate whenever the row 5, column A key was pressed (the "COMMODORE" key on our keyboard). See figures 3 and 4 for some schematic overview. I used an array of LEDs connected to each of the column pins and one by one powered each of the rows. With this method I was able to confirm that each button on the keyboard worked and that the pin-out and key map I found was accurate.
+
 #### Fig. 3
 ![[PINOUT_TEST.png]]
-<img src="/images/PINOUT_TEST.png">
+<img src="./images/PINOUT_TEST.png">
+
 #### Fig. 4
 ![[example1.png]]
-<img src="/images/example1.png">
+<img src="./images/example1.png">
+
 ## Adding Arduino
 
 An array of LEDs was great for confirming every key completes a circuit in the matrix but it's not very useful. One of the goals of this project is to be able to use the keyboard *AS* as keyboard. I would like to be able to connect the keyboard to a computer and press a key and have that key be understood as a computer would understand any other keyboard. So, our next step will be getting a microcontroller involved to help us read this matrix and hopefully pass keyboard commands for us.
 
 #### Fig. 5
 ![[arduino_schematics_pins.jpg]]
-<img src="/images/arduino_schematics_pins.jpg">
+<img src="./images/arduino_schematics_pins.jpg">
 
 To get started, lets start in the same place as the last test. We'll connect keyboard pin 7 (matrix row 5) to +5v just like we did before. This time, we'll remove the LED and instead connect keyboard pin 20 (column A) to GPIO pin 2 on an Arduino UNO. See Figure 5 for a reference of the Arduino pins. We'll have the Arduino supply the +5v and GND as needed. Now lets write some code to see the state of the pin:
 
@@ -117,13 +121,13 @@ See Figure 6 for a comparison of how we've been using the column and row pins as
 
 #### Fig. 6
 ![[differences.png]]
-<img src="/images/differences.png">
+<img src="./images/differences.png">
 
 You might notice this means that current is going to flow opposite to how it was when we were first testing (See figure 7). There's no diodes or anything on the keyboard i'm working with to prevent ghosting or prevent current flowing in any direction.
 
 #### Fig. 7
 ![[current.png]]
-<img src="/images/current.png">
+<img src="./images/current.png">
 
 Connecting each column pin to a pull-up resistor to keep our outputs high would be a little cumbersome. Thankfully designing circuits this way is common and the MCU in the Arduino has internal pull-up resistors so that it can act as a pull-up and input at the same time. Here's a video quickly going over the distinction and how to use the pull-up resistors.
 
@@ -168,7 +172,7 @@ Now that we've sorted out how to read just one key off of a row and column, lets
 First, let's decide our pins. We've been using Arduino pin 2 for our column and Arduino pin A0 (14) for our row. We'll keep counting up for the columns and use 2, 3, 4, 5, 6, 7, 8, and 9. Remember, we can't use pin 0 or 1 while we're using the serial monitor and we're still interested in looking at that. For our rows, we can use up the remaining "A" pins but then we'll have to use some of the pins on the other side near our columns. To keep separation, we'll use pin 13 and count down to fill the rest. That gives us pins A5, A4, A3, A2, A1, A0, 13, 12. With the serial monitor active, we'll only have 2 pins left on the Arduino to play with (10 and 11) which we could connect the restore key to but as mentioned we'll come back to that.
 
 ![[arduino-keyboard-pinout.png]]
-<img src="/images/arduino-keyboard-pinout.png">
+<img src="./images/arduino-keyboard-pinout.png">
 
 Let's go ahead and start setting up the code:
 
